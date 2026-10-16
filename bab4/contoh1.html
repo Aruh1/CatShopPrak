@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Promise</title>
+</head>
+<body>
+
+    <h2>Contoh Promise JavaScript</h2>
+    <p id="hasil">Menunggu hasil Promise...</p>
+
+    <script>
+        let janji = true;
+        const Promises = new Promise((resolve, reject) => {
+            setTimeout(() => { 
+                // Promise dalam kondisi Pending selama 1 detik
+
+                if (janji) {
+                    resolve('Janji ditepati');
+                } else {
+                    reject('Janji tidak ditepati');
+                }
+
+            }, 1000);
+        });
+
+        // Promise Handler
+        Promises
+            .then((response) => {
+                console.log('OK : ' + response);
+                document.getElementById('hasil').innerHTML =
+                    'OK : ' + response;
+            })
+            .catch((response) => {
+                console.log('SUMPAH GPP : ' + response);
+                document.getElementById('hasil').innerHTML =
+                    'SUMPAH GPP : ' + response;
+            });
+    </script>
+
+</body>
+</html>
+
