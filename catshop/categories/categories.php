@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!doctype php>
+<php lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="../assets/icon.png" />
@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catshop Admin | Transaction</title>
+    <title>Catshop Admin | Categories</title>
   </head>
 
   <body>
@@ -21,19 +21,19 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="../admin.html" class="active">
+          <a href="../admin.php" class="active">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="../categories/categories.html">
+          <a href="../categories/categories.php">
             <i class="bx bx-box"></i>
             <span class="links_name">Categories</span>
           </a>
         </li>
         <li>
-          <a href="../transaction/transaction.html">
+          <a href="../transaction/transaction.php">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Transaction</span>
           </a>
@@ -56,45 +56,37 @@
         </div>
       </nav>
       <div class="home-content">
-        <h3>Transaction</h3>
+        <h3>Categories</h3>
+        <button type="button" class="btn btn-tambah">
+          <a href="categories-entry.php">Tambah Data</a>
+        </button>
         <table class="table-data">
           <thead>
             <tr>
-              <th>Tanggal</th>
-              <th>Nama</th>
-              <th>Kategori</th>
-              <th>Harga</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th scope="col" style="width: 20%">Photo</th>
+              <th>Categories</th>
+              <th scope="col" style="width: 20%">Description</th>
+              <th scope="col" style="width: 15%">Price</th>
+              <th scope="col" style="width: 30%">Action</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>02-03-2023</td>
-              <td>Rizki Pratama</td>
+              <td><img src="../assets/thumbnail/anggora.png" alt="" /></td>
               <td>Anggora</td>
-              <td>450000</td>
               <td>
-                <p class="success">Success</p>
+                Anggora turki adalah salah satu ras kucing domestik alami
+                tertua. Ras ini berasal dari Ankara, Turki. Kucing ini sangat
+                populer dan terkenal di Indonesia.
               </td>
+              <td>450,000</td>
               <td>
-                <button
-                  class="btn_detail"
-                  onclick="
-                    showDetails(
-                      '02-03-2023',
-                      'Rizki Pratama',
-                      'Anggora',
-                      '450000',
-                      'Success',
-                    )
-                  "
-                >
-                  Detail
+                <button class="btn-edit" onclick="editCategory()">Edit</button>
+                <button class="btn-delete" onclick="deleteCategory()">
+                  Hapus
                 </button>
               </td>
             </tr>
-            <!-- Add more rows as needed -->
           </tbody>
         </table>
       </div>
@@ -108,11 +100,6 @@
           sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
         } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
       };
-      function showDetails(tanggal, nama, kategori, harga, status) {
-        alert(
-          `Tanggal: ${tanggal}\nNama: ${nama}\nKategori: ${kategori}\nHarga: ${harga}\nStatus: ${status}`,
-        );
-      }
     </script>
   </body>
-</html>
+</php>

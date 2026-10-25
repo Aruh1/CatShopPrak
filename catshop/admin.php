@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!doctype php>
+<php lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="assets/icon.png" />
@@ -26,19 +26,19 @@
           </a>
         </li>
         <li>
-          <a href="categories/categories.html">
+          <a href="categories/categories.php">
             <i class="bx bx-box"></i>
             <span class="links_name">Categories</span>
           </a>
         </li>
         <li>
-          <a href="transaction/transaction.html">
+          <a href="transaction/transaction.php">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Transaction</span>
           </a>
         </li>
         <li>
-          <a href="index.html">
+          <a href="index.php">
             <i class="bx bx-log-out"></i>
             <span class="links_name">Log out</span>
           </a>
@@ -85,7 +85,7 @@
             let s = date.getSeconds();
             m = checkTime(m);
             s = checkTime(s);
-            document.getElementById("date").innerHTML = `${hari}, ${tanggal} ${bulan} ${tahun}, ${jam}:${m}:${s}`;
+            document.getElementById("date").innerphp = `${hari}, ${tanggal} ${bulan} ${tahun}, ${jam}:${m}:${s}`;
             requestAnimationFrame(myFunction);
         }
         function checkTime(i) {
@@ -99,17 +99,17 @@
             let jam = new Date().getHours();
             if (nama != null) {
                 if (jam >= 4 && jam <= 10) {
-                    document.getElementById("text").innerHTML = `Selamat Pagi ${nama}`;
+                    document.getElementById("text").innerphp = `Selamat Pagi ${nama}`;
                 } else if (jam >= 11 && jam <= 14) {
-                    document.getElementById("text").innerHTML = `Selamat Siang ${nama}`;
+                    document.getElementById("text").innerphp = `Selamat Siang ${nama}`;
                 } else if (jam >= 15 && jam <= 18) {
-                    document.getElementById("text").innerHTML = `Selamat Sore ${nama}`;
+                    document.getElementById("text").innerphp = `Selamat Sore ${nama}`;
                 } else {
-                    document.getElementById("text").innerHTML = `Selamat Malam ${nama}`;
+                    document.getElementById("text").innerphp = `Selamat Malam ${nama}`;
                 }
             }
             myFunction();
         };
     </script>
   </body>
-</html>
+</php>

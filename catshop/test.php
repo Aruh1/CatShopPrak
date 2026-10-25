@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE php>
+<php lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,7 +126,7 @@
 
             let total = jumlah + jumlah;
 
-            document.getElementById("hasil").innerHTML =
+            document.getElementById("hasil").innerphp =
                 "<b>Rincian Pesanan</b><br>" +
                 "Produk : " + produk + "<br>" +
                 "Jumlah : " + jumlah + "<br>" +
@@ -139,11 +139,11 @@
             document.getElementById("produk").value = "";
             document.getElementById("jumlah").value = "";
             document.getElementById("harga").value = "";
-            document.getElementById("hasil").innerHTML = "";
+            document.getElementById("hasil").innerphp = "";
 
         }
 
     </script>
 
 </body>
-</html>
+</php>
